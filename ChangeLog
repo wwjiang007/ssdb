@@ -1,3 +1,21 @@
+* 1.9.6
+	* New features:
+		- Log slow query with WARN level(2017-11-08)
+		- Upgrade leveldb to version 1.20, fix MANIFEST file too large issue(2017-09-25)
+	* Incompatible changes:
+		- The SSDB_KEY_LEN_MAX limit will be applied to KV, as described in docs(2017-11-08)
+	* Bug fixes:
+		- Fix Xcode 9, iOS SDK 11 compile issue(2017-11-20)
+		- Fix Redis zrange, zrevrange, zremrangebyrank handle negative start/end bug(2017-12-05)
+* 1.9.5
+	* New features:
+		- C++ SDK add disconnected() method(2017-08-29)
+		- ssdb-cli supports -a option to connect with password(2017-07-19)
+		- Add slaveof.recv_timeout configuration(2017-05-03)
+	* Incompatible changes:
+		- setbit/getbit will be compatible with Redis, from LSB 0 to MSB 0(2017-05-16)
+	* Bug fixes:
+		- Fix ssdb-cli escape bug(2017-08-24)
 * 1.9.4
 	* Incompatible changes:
 		- Treat unsupported redis command's reply as REPLY_MULTI_BULK(2016-07-26)
